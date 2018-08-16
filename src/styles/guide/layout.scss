@@ -1,0 +1,16 @@
+@mixin flex-row($justify: space-between, $valign: center) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $valign;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

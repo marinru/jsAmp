@@ -1,0 +1,12 @@
+@import "sizes";
+
+@mixin module {
+    padding: $padding-control-default;
+    background-color: $color-panel;
+    border: 1px solid $color-border-default;
+    border-radius: $border-radius-default;
+    box-shadow:
+        0 $size-default / 12 $size-default / 2 $color-shadow,
+        inset 0 $size-default / 12 $size-default / 2 $color-shadow-2;
+    user-select: none;
+}

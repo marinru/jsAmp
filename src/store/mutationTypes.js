@@ -1,0 +1,3 @@
+export const SET_TRACKS = "SET_TRACKS";
+export const SET_CURRENT_TRACK = "SET_CURRENT_TRACK";
+export const TOGGLE_BLOCK = "TOGGLE_BLOCK";
