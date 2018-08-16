@@ -1,0 +1,46 @@
+{
+  "name": "js-amp",
+  "version": "0.0.0",
+  "description": "A js/vue-powered audio player PoC",
+  "main": "server.js",
+  "repository": "",
+  "author": "marinru",
+  "license": "ISC",
+  "scripts": {
+    "dev": "webpack --mode=development",
+    "devw": "webpack -w --mode=development",
+    "serve": "webpack-dev-server --mode=development --hot --open --content-base client/",
+    "prod": "webpack --mode=production",
+    "test": "jest --no-cache"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "express": "~3.2.4",
+    "vue": "^2.5.17",
+    "vue-awesome": "^3.1.0",
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.24",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "jest": "^23.5.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.1.0",
+    "vue-jest": "^2.6.0",
+    "vue-loader": "^15.3.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^2.1.5",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-notifier": "^1.6.0"
+  }
+}

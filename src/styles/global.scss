@@ -1,0 +1,23 @@
+@import "guide/_index";
+
+.body {
+    background-color: $color-neutral;
+    margin: 0;
+    font-family: $font-family-default;
+    font-size: 1.5vmin;
+}
+
+.row {
+    &--spaced-between {
+        @include flex-row($justify: space-between);
+    }
+    
+    &--spaced-around {
+        @include flex-row($justify: space-around);
+    }
+}
+
+.fa-icon {
+    width: auto;
+    height: $font-size-default * .8;
+}
