@@ -11,6 +11,9 @@ export default {
         commit(mutation.SET_TRACKS, { tracks });
         commit(mutation.SET_CURRENT_TRACK, { index: undefined });
     },
+    setCurrentTrack({ commit }, { index }) {
+        commit(mutation.SET_CURRENT_TRACK, { index });
+    },
     togglePlaylist({ commit }) {
         commit(mutation.TOGGLE_BLOCK, { block: playerBlock.playlist });
     },
