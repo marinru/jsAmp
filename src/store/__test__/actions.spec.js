@@ -34,4 +34,17 @@ describe("actions", () => {
             expect(toggledBlock).toBe(playerBlock.visualizer);
         });
     });
+
+    it("commits current track setting correctly", () => {
+        let committedMutation;
+        let trackIndex;
+        const mockCommit = (mutation, { index }) => {
+            committedMutation = mutation;
+            trackIndex = index;
+        };
+
+        actions.setCurrentTrack({ commit: mockCommit }, { index: 1000 });
+        expect(committedMutation).toBe(mutation.SET_CURRENT_TRACK);
+        expect(trackIndex).toBe(1000);
+    });
 });

@@ -6,14 +6,14 @@
             :title="file.name"
             class="playlist__item"
             v-bind:class="{'playlist__item--current': index === currentTrackId}"
-            @click="changeCurrent(index)"
+            @click="setCurrentTrack({index})"
             @dblclick="$emit('play')">
         </div>
     </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 
 export default {
     data() {
@@ -26,16 +26,9 @@ export default {
         })
     },
     methods: {
-        changeCurrent(newIndex) {
-            this.currentIndex = newIndex;
-            this.$emit('change', newIndex);
-        }
-    },
-    watch: {
-        // files() {
-        //     let isEmptyFileListLoaded = !this.files || this.files.length === 0;
-        //     this.currentIndex = isEmptyFileListLoaded ? null : 0;
-        // }
+        ...mapActions([
+            "setCurrentTrack"
+        ])
     }
 }
 </script>
